@@ -10,7 +10,7 @@ users = db["users"]
 orders = db["orders"]
 
 app = Flask(__name__)
-server = app.server
+app = Flask(__name__.split('.')[0])
 
 @app.route('/', methods=['GET', 'POST'])
 def reply():
