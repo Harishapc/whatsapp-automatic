@@ -18,7 +18,7 @@ def reply():
     number = request.form.get("From")
     number = number.replace("whatsapp:", "")
     response = MessagingResponse()
-    message.media("https://images.unsplash.com/photo-1608365151231-7dbed3034787?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80","Welcom")
+    response = message.media("https://images.unsplash.com/photo-1608365151231-7dbed3034787?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80","Welcom")
     user = users.find_one({"number": number})
 
     if bool(user) ==False :
